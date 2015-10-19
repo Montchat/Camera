@@ -7,21 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0B61B31BD56C160020D516 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B61B21BD56C160020D516 /* Create.storyboard */; settings = {ASSET_TAGS = (); }; };
+		2B0B61B51BD56C250020D516 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0B61B41BD56C250020D516 /* User.storyboard */; settings = {ASSET_TAGS = (); }; };
+		2B0B61BB1BD56EB60020D516 /* SelfieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61BA1BD56EB60020D516 /* SelfieTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61BE1BD56ECF0020D516 /* SelfieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61BD1BD56ECF0020D516 /* SelfieDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61C11BD5704D0020D516 /* SelfieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61C01BD5704D0020D516 /* SelfieTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61C41BD578030020D516 /* CaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61C31BD578030020D516 /* CaptureViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61C71BD578240020D516 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61C61BD578240020D516 /* FilterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61CA1BD578390020D516 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61C91BD578390020D516 /* SubmitViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61CD1BD578750020D516 /* FilterDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61CC1BD578750020D516 /* FilterDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61D21BD579A60020D516 /* FilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61D11BD579A60020D516 /* FilterCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61D51BD580B50020D516 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61D41BD580B50020D516 /* ChoiceViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61D81BD580D40020D516 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61D71BD580D40020D516 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61DB1BD580FF0020D516 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61DA1BD580FF0020D516 /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2B0B61DE1BD5816F0020D516 /* AvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B61DD1BD5816F0020D516 /* AvatarViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2B8704FE1BD526C500650F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8704FD1BD526C500650F47 /* main.m */; };
 		2B8705011BD526C500650F47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8705001BD526C500650F47 /* AppDelegate.m */; };
-		2B8705041BD526C500650F47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8705031BD526C500650F47 /* ViewController.m */; };
 		2B8705071BD526C500650F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8705051BD526C500650F47 /* Main.storyboard */; };
 		2B8705091BD526C500650F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8705081BD526C500650F47 /* Assets.xcassets */; };
 		2B87050C1BD526C500650F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B87050A1BD526C500650F47 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0B61B21BD56C160020D516 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Create.storyboard; path = ../Create.storyboard; sourceTree = "<group>"; };
+		2B0B61B41BD56C250020D516 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = User.storyboard; path = ../User.storyboard; sourceTree = "<group>"; };
+		2B0B61B91BD56EB60020D516 /* SelfieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewController.h; sourceTree = "<group>"; };
+		2B0B61BA1BD56EB60020D516 /* SelfieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewController.m; sourceTree = "<group>"; };
+		2B0B61BC1BD56ECF0020D516 /* SelfieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieDetailViewController.h; sourceTree = "<group>"; };
+		2B0B61BD1BD56ECF0020D516 /* SelfieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieDetailViewController.m; sourceTree = "<group>"; };
+		2B0B61BF1BD5704D0020D516 /* SelfieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelfieTableViewCell.h; sourceTree = "<group>"; };
+		2B0B61C01BD5704D0020D516 /* SelfieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfieTableViewCell.m; sourceTree = "<group>"; };
+		2B0B61C21BD578030020D516 /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
+		2B0B61C31BD578030020D516 /* CaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureViewController.m; sourceTree = "<group>"; };
+		2B0B61C51BD578240020D516 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		2B0B61C61BD578240020D516 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		2B0B61C81BD578390020D516 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
+		2B0B61C91BD578390020D516 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		2B0B61CB1BD578750020D516 /* FilterDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterDataSource.h; sourceTree = "<group>"; };
+		2B0B61CC1BD578750020D516 /* FilterDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterDataSource.m; sourceTree = "<group>"; };
+		2B0B61D01BD579A60020D516 /* FilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewCell.h; sourceTree = "<group>"; };
+		2B0B61D11BD579A60020D516 /* FilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewCell.m; sourceTree = "<group>"; };
+		2B0B61D31BD580B50020D516 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
+		2B0B61D41BD580B50020D516 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
+		2B0B61D61BD580D40020D516 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2B0B61D71BD580D40020D516 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2B0B61D91BD580FF0020D516 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		2B0B61DA1BD580FF0020D516 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		2B0B61DC1BD5816F0020D516 /* AvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarViewController.h; sourceTree = "<group>"; };
+		2B0B61DD1BD5816F0020D516 /* AvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarViewController.m; sourceTree = "<group>"; };
 		2B8704F91BD526C500650F47 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8704FD1BD526C500650F47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B8704FF1BD526C500650F47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B8705001BD526C500650F47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2B8705021BD526C500650F47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2B8705031BD526C500650F47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2B8705061BD526C500650F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B8705081BD526C500650F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B87050B1BD526C500650F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +76,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0B61B61BD56CD10020D516 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B61CE1BD578AA0020D516 /* TableView */,
+				2B0B61B91BD56EB60020D516 /* SelfieTableViewController.h */,
+				2B0B61BA1BD56EB60020D516 /* SelfieTableViewController.m */,
+				2B0B61BC1BD56ECF0020D516 /* SelfieDetailViewController.h */,
+				2B0B61BD1BD56ECF0020D516 /* SelfieDetailViewController.m */,
+			);
+			name = MainFlow;
+			sourceTree = "<group>";
+		};
+		2B0B61B71BD56CDA0020D516 /* CreateFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B61C21BD578030020D516 /* CaptureViewController.h */,
+				2B0B61C31BD578030020D516 /* CaptureViewController.m */,
+				2B0B61C51BD578240020D516 /* FilterViewController.h */,
+				2B0B61C61BD578240020D516 /* FilterViewController.m */,
+				2B0B61C81BD578390020D516 /* SubmitViewController.h */,
+				2B0B61C91BD578390020D516 /* SubmitViewController.m */,
+				2B0B61CF1BD578FA0020D516 /* FilterView */,
+			);
+			name = CreateFlow;
+			sourceTree = "<group>";
+		};
+		2B0B61B81BD56CE80020D516 /* UserFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B61D31BD580B50020D516 /* ChoiceViewController.h */,
+				2B0B61D41BD580B50020D516 /* ChoiceViewController.m */,
+				2B0B61D61BD580D40020D516 /* LoginViewController.h */,
+				2B0B61D71BD580D40020D516 /* LoginViewController.m */,
+				2B0B61D91BD580FF0020D516 /* RegisterViewController.h */,
+				2B0B61DA1BD580FF0020D516 /* RegisterViewController.m */,
+				2B0B61DC1BD5816F0020D516 /* AvatarViewController.h */,
+				2B0B61DD1BD5816F0020D516 /* AvatarViewController.m */,
+			);
+			name = UserFlow;
+			sourceTree = "<group>";
+		};
+		2B0B61CE1BD578AA0020D516 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B61BF1BD5704D0020D516 /* SelfieTableViewCell.h */,
+				2B0B61C01BD5704D0020D516 /* SelfieTableViewCell.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		2B0B61CF1BD578FA0020D516 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				2B0B61CB1BD578750020D516 /* FilterDataSource.h */,
+				2B0B61CC1BD578750020D516 /* FilterDataSource.m */,
+				2B0B61D01BD579A60020D516 /* FilterCollectionViewCell.h */,
+				2B0B61D11BD579A60020D516 /* FilterCollectionViewCell.m */,
+			);
+			name = FilterView;
+			sourceTree = "<group>";
+		};
 		2B8704F01BD526C500650F47 = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +157,13 @@
 			isa = PBXGroup;
 			children = (
 				2B8705051BD526C500650F47 /* Main.storyboard */,
+				2B0B61B61BD56CD10020D516 /* MainFlow */,
+				2B0B61B21BD56C160020D516 /* Create.storyboard */,
+				2B0B61B71BD56CDA0020D516 /* CreateFlow */,
+				2B0B61B81BD56CE80020D516 /* UserFlow */,
+				2B0B61B41BD56C250020D516 /* User.storyboard */,
 				2B8704FF1BD526C500650F47 /* AppDelegate.h */,
 				2B8705001BD526C500650F47 /* AppDelegate.m */,
-				2B8705021BD526C500650F47 /* ViewController.h */,
-				2B8705031BD526C500650F47 /* ViewController.m */,
 				2B8704FC1BD526C500650F47 /* Supporting Files */,
 			);
 			path = Camera;
@@ -137,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B87050C1BD526C500650F47 /* LaunchScreen.storyboard in Resources */,
+				2B0B61B51BD56C250020D516 /* User.storyboard in Resources */,
 				2B8705091BD526C500650F47 /* Assets.xcassets in Resources */,
+				2B0B61B31BD56C160020D516 /* Create.storyboard in Resources */,
 				2B8705071BD526C500650F47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +252,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B8705041BD526C500650F47 /* ViewController.m in Sources */,
+				2B0B61CD1BD578750020D516 /* FilterDataSource.m in Sources */,
 				2B8705011BD526C500650F47 /* AppDelegate.m in Sources */,
+				2B0B61BE1BD56ECF0020D516 /* SelfieDetailViewController.m in Sources */,
+				2B0B61C11BD5704D0020D516 /* SelfieTableViewCell.m in Sources */,
+				2B0B61BB1BD56EB60020D516 /* SelfieTableViewController.m in Sources */,
+				2B0B61CA1BD578390020D516 /* SubmitViewController.m in Sources */,
+				2B0B61D21BD579A60020D516 /* FilterCollectionViewCell.m in Sources */,
+				2B0B61C71BD578240020D516 /* FilterViewController.m in Sources */,
+				2B0B61D81BD580D40020D516 /* LoginViewController.m in Sources */,
+				2B0B61DB1BD580FF0020D516 /* RegisterViewController.m in Sources */,
 				2B8704FE1BD526C500650F47 /* main.m in Sources */,
+				2B0B61C41BD578030020D516 /* CaptureViewController.m in Sources */,
+				2B0B61D51BD580B50020D516 /* ChoiceViewController.m in Sources */,
+				2B0B61DE1BD5816F0020D516 /* AvatarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

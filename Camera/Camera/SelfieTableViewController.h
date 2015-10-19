@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SelfieTableViewConroller.h
 //  Camera
 //
 //  Created by Joe E. on 10/19/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SelfieTableViewController : UITableViewController
 
 @end
