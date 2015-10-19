@@ -58,14 +58,11 @@
 		2B8704FB1BD526C500650F47 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				2B8705051BD526C500650F47 /* Main.storyboard */,
 				2B8704FF1BD526C500650F47 /* AppDelegate.h */,
 				2B8705001BD526C500650F47 /* AppDelegate.m */,
 				2B8705021BD526C500650F47 /* ViewController.h */,
 				2B8705031BD526C500650F47 /* ViewController.m */,
-				2B8705051BD526C500650F47 /* Main.storyboard */,
-				2B8705081BD526C500650F47 /* Assets.xcassets */,
-				2B87050A1BD526C500650F47 /* LaunchScreen.storyboard */,
-				2B87050D1BD526C500650F47 /* Info.plist */,
 				2B8704FC1BD526C500650F47 /* Supporting Files */,
 			);
 			path = Camera;
@@ -74,6 +71,9 @@
 		2B8704FC1BD526C500650F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B8705081BD526C500650F47 /* Assets.xcassets */,
+				2B87050A1BD526C500650F47 /* LaunchScreen.storyboard */,
+				2B87050D1BD526C500650F47 /* Info.plist */,
 				2B8704FD1BD526C500650F47 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -300,6 +300,7 @@
 				2B8705121BD526C500650F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
