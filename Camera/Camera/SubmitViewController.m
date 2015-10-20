@@ -7,8 +7,11 @@
 //
 
 #import "SubmitViewController.h"
+#import <Parse/Parse.h>
 
 @interface SubmitViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *captionTextView;
 
 @end
 
@@ -22,6 +25,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)submitSelfie:(id)sender {
+    PFObject * selfie = [PFObject objectWithClassName:@"Selfie"];
+    selfie[@"caption"] = self.captionTextView.text;
+    
+    [selfie saveInBackground];
+    
 }
 
 /*

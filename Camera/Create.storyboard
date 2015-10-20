@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Thr-HR-PJD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,22 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-F1-Ofy">
-                                <rect key="frame" x="0.0" y="151" width="600" height="449"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-F1-Ofy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMi-Qu-DUK">
-                                <rect key="frame" x="495" y="556" width="85" height="30"/>
+                                <rect key="frame" x="480" y="486" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ljn-gx-Knm"/>
+                                    <constraint firstAttribute="height" constant="100" id="sln-Tr-4wN"/>
+                                </constraints>
                                 <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="ZSm-V5-ZHc" eventType="touchUpInside" id="92A-Cv-1Qd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ftr-rr-6Yh" firstAttribute="top" secondItem="MMi-Qu-DUK" secondAttribute="bottom" constant="14" id="CP6-aa-qey"/>
+                            <constraint firstAttribute="trailing" secondItem="1cf-F1-Ofy" secondAttribute="trailing" id="Qd9-ZF-3gl"/>
+                            <constraint firstItem="1cf-F1-Ofy" firstAttribute="leading" secondItem="5lo-R3-ALP" secondAttribute="leading" id="Rnq-DT-dPA"/>
+                            <constraint firstItem="ftr-rr-6Yh" firstAttribute="top" secondItem="1cf-F1-Ofy" secondAttribute="bottom" id="gGZ-3e-j82"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MMi-Qu-DUK" secondAttribute="trailing" id="kny-RY-mIS"/>
+                            <constraint firstItem="1cf-F1-Ofy" firstAttribute="top" secondItem="kh5-fU-SC6" secondAttribute="bottom" id="prF-l4-z5N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ess-6t-P2U"/>
+                    <connections>
+                        <outlet property="cameraHolderView" destination="1cf-F1-Ofy" id="QHd-vQ-D9L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smv-D7-XTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,6 +90,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="filterImageView" destination="ePr-vZ-mqG" id="Le6-Vc-VRR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-yx-RoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,13 +119,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S89-Ce-HHY">
+                                <rect key="frame" x="276" y="535" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitSelfie:" destination="yXZ-vo-I6W" eventType="touchUpInside" id="sAX-ao-0K5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="captionTextView" destination="Opo-Sw-R5q" id="WBu-Iu-Gnk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHh-Na-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634" y="329"/>
+            <point key="canvasLocation" x="2664" y="329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kss-sX-Ws6">

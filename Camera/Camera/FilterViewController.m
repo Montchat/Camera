@@ -10,13 +10,20 @@
 
 @interface FilterViewController ()
 
+
 @end
 
 @implementation FilterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.filterImageView.image = self.originalImage;
+ 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.filterImageView.image = self.originalImage;
 }
 
 - (void)didReceiveMemoryWarning {
