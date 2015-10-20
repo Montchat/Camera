@@ -10,6 +10,15 @@
 
 @interface ChoiceViewController ()
 
+//MARK: - @properties
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterConnectionButton;
+
+//MARK: - IBActions
+- (IBAction)twitterConnectionPressed:(id)sender;
+
+
 @end
 
 @implementation ChoiceViewController
@@ -34,4 +43,6 @@
 }
 */
 
+- (IBAction)twitterConnectionPressed:(id)sender {
+}
 @end

@@ -17,14 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMi-Qu-DUK">
+                                <rect key="frame" x="495" y="556" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePicturePressed:" destination="ZSm-V5-ZHc" eventType="touchUpInside" id="IQt-vC-Hve"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-F1-Ofy">
                                 <rect key="frame" x="0.0" y="151" width="600" height="449"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMi-Qu-DUK">
-                                <rect key="frame" x="495" y="556" width="85" height="30"/>
-                                <state key="normal" title="Take Picture"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -33,6 +36,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ess-6t-P2U"/>
+                    <connections>
+                        <outlet property="cameraView" destination="1cf-F1-Ofy" id="x1s-7R-5yT"/>
+                        <outlet property="takePictureButton" destination="MMi-Qu-DUK" id="tc9-QJ-yO6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smv-D7-XTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,9 +80,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-ah-0Ll">
+                                <rect key="frame" x="498" y="447" width="82" height="30"/>
+                                <state key="normal" title="Select Filter"/>
+                                <connections>
+                                    <action selector="selectFilterPressed:" destination="Mr9-wG-TpB" eventType="touchUpInside" id="iC8-pn-4j4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="filterCollectionView" destination="sbO-fO-kDP" id="l7F-Lp-drZ"/>
+                        <outlet property="pictureImageview" destination="ePr-vZ-mqG" id="9aC-am-84p"/>
+                        <outlet property="selectFilterButton" destination="zP0-ah-0Ll" id="IxH-EE-ULb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-yx-RoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +124,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="captionTextView" destination="Opo-Sw-R5q" id="eOn-U5-M4Z"/>
+                        <outlet property="pictureImageView" destination="PTg-rW-0Cx" id="jqd-R0-cW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHh-Na-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

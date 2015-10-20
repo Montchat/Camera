@@ -10,6 +10,10 @@
 
 @interface SubmitViewController ()
 
+//MARK: - @properties
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+@property (weak, nonatomic) IBOutlet UITextView *captionTextView;
+
 @end
 
 @implementation SubmitViewController

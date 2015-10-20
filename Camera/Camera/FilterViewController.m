@@ -10,6 +10,15 @@
 
 @interface FilterViewController ()
 
+// MARK: - @properties
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageview;
+@property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionViewCell *filterView;
+@property (weak, nonatomic) IBOutlet UIButton *selectFilterButton;
+
+//MARK: - IBActions
+- (IBAction)selectFilterPressed:(id)sender;
+
 @end
 
 @implementation FilterViewController
@@ -34,4 +43,6 @@
 }
 */
 
+- (IBAction)selectFilterPressed:(id)sender {
+}
 @end

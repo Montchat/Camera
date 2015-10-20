@@ -10,6 +10,12 @@
 
 @interface RegisterViewController ()
 
+//MARK: - @properties
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
 @end
 
 @implementation RegisterViewController

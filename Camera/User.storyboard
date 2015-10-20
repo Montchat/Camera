@@ -16,16 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g1-aP-l6L">
-                                <rect key="frame" x="272" y="413" width="57" height="30"/>
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <segue destination="x6I-al-H0O" kind="show" id="u6D-Jj-QiN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHB-Gd-7Ph">
                                 <rect key="frame" x="235" y="550" width="130" height="30"/>
                                 <state key="normal" title="Twitter Connection"/>
+                                <connections>
+                                    <action selector="twitterConnectionPressed:" destination="hpH-jn-C7t" eventType="touchUpInside" id="c4S-Db-LLI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e2-2X-RW5">
                                 <rect key="frame" x="281" y="486" width="38" height="30"/>
@@ -34,10 +30,22 @@
                                     <segue destination="Nne-bP-aPX" kind="show" id="Ybk-sd-NwB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g1-aP-l6L">
+                                <rect key="frame" x="272" y="413" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="x6I-al-H0O" kind="show" id="u6D-Jj-QiN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="p22-9K-H8C"/>
+                    <connections>
+                        <outlet property="loginButton" destination="2e2-2X-RW5" id="1M3-FW-y7o"/>
+                        <outlet property="registerButton" destination="8g1-aP-l6L" id="jks-5E-QsD"/>
+                        <outlet property="twitterConnectionButton" destination="fHB-Gd-7Ph" id="BRi-qc-Co7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfw-Lc-uC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,11 +73,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83K-ru-YvQ">
-                                <rect key="frame" x="20" y="182" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LM-IY-q8H">
                                 <rect key="frame" x="24" y="220" width="89" height="30"/>
                                 <state key="normal" title="next"/>
@@ -77,9 +80,20 @@
                                     <segue destination="2o4-4r-Xj3" kind="show" id="R4e-P1-ayv"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83K-ru-YvQ">
+                                <rect key="frame" x="20" y="182" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="83K-ru-YvQ" id="pk8-qm-60o"/>
+                        <outlet property="nextButton" destination="4LM-IY-q8H" id="z4Z-L3-A1t"/>
+                        <outlet property="passwordTextField" destination="FO6-aK-rsF" id="LyX-Rk-lF5"/>
+                        <outlet property="usernameTextField" destination="WIl-1b-xxu" id="GCI-xO-g9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62s-fn-5QX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
