@@ -9,6 +9,7 @@
 #import "CaptureViewController.h"
 #import "FilterViewController.h"
 
+
 @interface CaptureViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cameraHolderView;

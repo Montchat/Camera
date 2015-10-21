@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Thr-HR-PJD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -64,8 +65,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-vZ-mqG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-vZ-mqG">
                                 <rect key="frame" x="0.0" y="20" width="600" height="471"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ePr-vZ-mqG" secondAttribute="height" multiplier="200:157" id="2yg-lT-V17"/>
+                                </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-fO-kDP">
                                 <rect key="frame" x="0.0" y="499" width="600" height="101"/>
@@ -87,11 +91,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdS-bV-Fo5">
+                                <rect key="frame" x="273" y="441" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IdS-bV-Fo5" secondAttribute="height" multiplier="9:5" id="zxp-zo-E3I"/>
+                                </constraints>
+                                <state key="normal" title="Preview"/>
+                                <connections>
+                                    <action selector="previewPressed:" destination="Mr9-wG-TpB" eventType="touchUpInside" id="s0N-Np-GDV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IdS-bV-Fo5" firstAttribute="centerX" secondItem="u3h-kP-HR7" secondAttribute="centerX" id="5k2-Ug-k35"/>
+                            <constraint firstItem="ePr-vZ-mqG" firstAttribute="top" secondItem="ZzB-Ng-erf" secondAttribute="bottom" id="7NN-jl-6pQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ePr-vZ-mqG" secondAttribute="trailing" id="H6v-hG-F1L"/>
+                            <constraint firstItem="IdS-bV-Fo5" firstAttribute="top" secondItem="ZzB-Ng-erf" secondAttribute="bottom" constant="421" id="Jks-YI-7Re"/>
+                            <constraint firstItem="ePr-vZ-mqG" firstAttribute="leading" secondItem="u3h-kP-HR7" secondAttribute="leading" id="rHm-Ty-xu5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="filterImageView" destination="ePr-vZ-mqG" id="Le6-Vc-VRR"/>
+                        <outlet property="previewButton" destination="IdS-bV-Fo5" id="gKX-eh-EyV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOj-yx-RoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,17 +132,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-rW-0Cx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-rW-0Cx">
                                 <rect key="frame" x="20" y="28" width="560" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PTg-rW-0Cx" secondAttribute="height" multiplier="560:269" id="qRP-XA-udw"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-Sw-R5q">
-                                <rect key="frame" x="20" y="305" width="560" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-Sw-R5q">
+                                <rect key="frame" x="20" y="327" width="560" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Opo-Sw-R5q" secondAttribute="height" multiplier="35:8" id="AAJ-jl-ytJ"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S89-Ce-HHY">
-                                <rect key="frame" x="276" y="535" width="49" height="30"/>
+                                <rect key="frame" x="276" y="299" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitSelfie:" destination="yXZ-vo-I6W" eventType="touchUpInside" id="sAX-ao-0K5"/>
@@ -128,9 +156,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Opo-Sw-R5q" firstAttribute="top" secondItem="PTg-rW-0Cx" secondAttribute="bottom" constant="30" id="Dsz-Py-yjP"/>
+                            <constraint firstItem="Opo-Sw-R5q" firstAttribute="leading" secondItem="sPQ-mv-S0a" secondAttribute="leadingMargin" id="GXV-Ea-B2a"/>
+                            <constraint firstItem="PTg-rW-0Cx" firstAttribute="trailing" secondItem="sPQ-mv-S0a" secondAttribute="trailingMargin" id="Sny-2R-BBA"/>
+                            <constraint firstItem="PTg-rW-0Cx" firstAttribute="top" secondItem="Eep-Jn-EX4" secondAttribute="bottom" constant="8" id="Yan-PV-Tti"/>
+                            <constraint firstItem="PTg-rW-0Cx" firstAttribute="leading" secondItem="sPQ-mv-S0a" secondAttribute="leadingMargin" id="bYD-TO-CuV"/>
+                            <constraint firstItem="Opo-Sw-R5q" firstAttribute="trailing" secondItem="sPQ-mv-S0a" secondAttribute="trailingMargin" id="lzA-Jt-7Md"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="captionTextView" destination="Opo-Sw-R5q" id="WBu-Iu-Gnk"/>
+                        <outlet property="pictureImageView" destination="PTg-rW-0Cx" id="Av8-zB-ccY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHh-Na-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>

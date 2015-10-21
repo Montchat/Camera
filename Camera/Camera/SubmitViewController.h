@@ -10,4 +10,11 @@
 
 @interface SubmitViewController : UIViewController
 
+
+//MARK: Properties
+@property UIImage * originalImage;
+
+//MARK: IBOutlets
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+
 @end

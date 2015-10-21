@@ -13,5 +13,8 @@
 @property UIImage * originalImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
+@property (weak, nonatomic) IBOutlet UIButton *previewButton;
+
+
 
 @end

@@ -19,7 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.pictureImageView.image = self.originalImage;
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.pictureImageView.image = self.originalImage;
+    self.pictureImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +38,9 @@
 }
 - (IBAction)submitSelfie:(id)sender {
     PFObject * selfie = [PFObject objectWithClassName:@"Selfie"];
+    UIImage * image = self.pictureImageView.image;
+    NSData * _Nullable UIImageJPEGRepresentation (UIImage * image, CGFloat compressionQuality);
+//    selfie[@"image"] = self.pictureImageView.image;
     selfie[@"caption"] = self.captionTextView.text;
     
     [selfie saveInBackground];
