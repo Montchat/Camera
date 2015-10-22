@@ -64,33 +64,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-vZ-mqG">
-                                <rect key="frame" x="0.0" y="20" width="600" height="471"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-vZ-mqG">
+                                <rect key="frame" x="0.0" y="20" width="600" height="550"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-fO-kDP">
-                                <rect key="frame" x="0.0" y="499" width="600" height="101"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NNf-QZ-0mS">
-                                    <size key="itemSize" width="50" height="50"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-fO-kDP">
+                                <rect key="frame" x="0.0" y="470" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5sg-21-F84"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NNf-QZ-0mS">
+                                    <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GVz-8l-A31" customClass="FilterCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="GVz-8l-A31" customClass="FilterCollectionViewCell">
+                                        <rect key="frame" x="10" y="10" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-gO-7Zh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="filterImageView" destination="Fb6-gO-7Zh" id="B1h-rq-OM0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn9-Ig-KR8">
+                                <rect key="frame" x="0.0" y="570" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.49931060119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="93d-uL-AFD"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="0.96514694320000005" blue="0.95816146609999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xn9-Ig-KR8" secondAttribute="trailing" id="22n-Rv-7Pj"/>
+                            <constraint firstItem="sbO-fO-kDP" firstAttribute="leading" secondItem="u3h-kP-HR7" secondAttribute="leading" id="Erk-Jy-HuK"/>
+                            <constraint firstItem="Xn9-Ig-KR8" firstAttribute="top" secondItem="ePr-vZ-mqG" secondAttribute="bottom" id="Vk1-Ii-hfz"/>
+                            <constraint firstItem="ePr-vZ-mqG" firstAttribute="top" secondItem="ZzB-Ng-erf" secondAttribute="bottom" id="WVC-vo-IW0"/>
+                            <constraint firstItem="Xn9-Ig-KR8" firstAttribute="top" secondItem="sbO-fO-kDP" secondAttribute="bottom" id="aIV-C6-hbF"/>
+                            <constraint firstItem="Xn9-Ig-KR8" firstAttribute="leading" secondItem="u3h-kP-HR7" secondAttribute="leading" id="agD-Ty-RxA"/>
+                            <constraint firstItem="30d-fg-Skd" firstAttribute="top" secondItem="Xn9-Ig-KR8" secondAttribute="bottom" id="i2X-ip-Bxf"/>
+                            <constraint firstAttribute="trailing" secondItem="sbO-fO-kDP" secondAttribute="trailing" id="oK1-zz-7hQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ePr-vZ-mqG" secondAttribute="trailing" id="oZZ-ro-9Vc"/>
+                            <constraint firstItem="ePr-vZ-mqG" firstAttribute="leading" secondItem="u3h-kP-HR7" secondAttribute="leading" id="z8T-Al-fyu"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterCollectionView" destination="sbO-fO-kDP" id="0mk-W4-S3Y"/>
                         <outlet property="filterImageView" destination="ePr-vZ-mqG" id="Le6-Vc-VRR"/>
                     </connections>
                 </viewController>

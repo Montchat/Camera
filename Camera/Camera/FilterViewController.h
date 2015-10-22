@@ -12,6 +12,5 @@
 
 @property UIImage * originalImage;
 
-@property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
 
 @end

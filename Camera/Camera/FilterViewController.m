@@ -7,38 +7,56 @@
 //
 
 #import "FilterViewController.h"
+#import "FilterCollectionViewCell.h"
+#import "ImageEditing.h"
 
-@interface FilterViewController ()
+@interface FilterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
 
 @end
 
 @implementation FilterViewController
+{
+    NSArray * filterNames;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.filterImageView.image = self.originalImage;
+    
+    self.filterCollectionView.dataSource = self;
+    self.filterCollectionView.delegate = self;
+    
+    filterNames = [CIFilter filterNamesInCategory:kCICategoryColorEffect];
+    [self.filterCollectionView reloadData];
  
 }
-
-- (void)viewDidAppear:(BOOL)animated {
-    self.filterImageView.image = self.originalImage;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return filterNames.count;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FilterCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilterCell" forIndexPath:indexPath];
+    
+    cell.filterName = filterNames[indexPath.item];
+    
+    UIImage * resizedImage = resizeImage(self.originalImage, CGSizeMake(80, 80));
+    cell.originalImage = resizedImage;
+    return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    FilterCollectionViewCell * cell = (FilterCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.filterImageView.image = filterImage(self.originalImage, cell.filterName);
+    
 }
-*/
 
 @end
+
+

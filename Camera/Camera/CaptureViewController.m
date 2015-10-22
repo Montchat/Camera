@@ -9,6 +9,7 @@
 #import "CaptureViewController.h"
 #import "FilterViewController.h"
 
+
 @interface CaptureViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cameraHolderView;
@@ -63,7 +64,7 @@
     
     FilterViewController * filterVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FilterVC"];
     
-    filterVC.originalImage = image;
+    filterVC.originalImage = flipImage(image);
     [self.navigationController pushViewController:filterVC animated:YES];
     
     

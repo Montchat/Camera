@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageEditing.h"
 
 @interface CaptureViewController : UIViewController
 

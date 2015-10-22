@@ -7,7 +7,29 @@
 //
 
 #import "FilterCollectionViewCell.h"
+#import "ImageEditing.h"
 
 @implementation FilterCollectionViewCell
+
+- (void)didMoveToWindow {
+//    [self filterImage];
+    self.filterImageView.image = filterImage(self.originalImage, self.filterName);
+    
+}
+
+- (void)prepareForReuse {
+//    [self filterImage];
+    self.filterImageView.image = filterImage(self.originalImage, self.filterName);
+}
+
+- (void)filterImage {
+   // [self filterImage];
+    
+}
+
+- (void) runFilterInBackground {
+
+}
+
 
 @end

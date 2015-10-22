@@ -91,6 +91,7 @@
 		2B8705081BD526C500650F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B87050B1BD526C500650F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B87050D1BD526C500650F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B9666F51BD8106500E87500 /* ImageEditing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageEditing.h; path = ../ImageEditing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +222,7 @@
 		2B8704FB1BD526C500650F47 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				2B9666F51BD8106500E87500 /* ImageEditing.h */,
 				2B8705051BD526C500650F47 /* Main.storyboard */,
 				2B0B61B61BD56CD10020D516 /* MainFlow */,
 				2B0B61B21BD56C160020D516 /* Create.storyboard */,
