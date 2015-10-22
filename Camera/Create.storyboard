@@ -107,6 +107,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="0.96514694320000005" blue="0.95816146609999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="Mr9-wG-TpB" eventType="touchUpInside" id="Nba-RH-eDP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="captionTextView" destination="Opo-Sw-R5q" id="WBu-Iu-Gnk"/>
+                        <outlet property="filteredPictureImageView" destination="PTg-rW-0Cx" id="2m7-yn-Ob7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHh-Na-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>

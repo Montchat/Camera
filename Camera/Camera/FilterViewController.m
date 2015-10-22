@@ -9,17 +9,27 @@
 #import "FilterViewController.h"
 #import "FilterCollectionViewCell.h"
 #import "ImageEditing.h"
+#import "SubmitViewController.h"
 
 @interface FilterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *filterImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *filterCollectionView;
 
+
+
 @end
 
 @implementation FilterViewController
 {
     NSArray * filterNames;
+    
+}
+- (IBAction)nextButtonPressed:(id)sender {
+    
+    SubmitViewController *submitVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SubmitVC" ];
+    submitVC.filteredImage = self.filterImageView.image; 
+    [self.navigationController pushViewController:submitVC animated:true];
     
 }
 
@@ -57,6 +67,6 @@
     
 }
 
+
+
 @end
-
-

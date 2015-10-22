@@ -10,4 +10,8 @@
 
 @interface SubmitViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *filteredPictureImageView;
+
+@property UIImage *filteredImage;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "SelfieTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface SelfieTableViewController ()
 
@@ -17,16 +18,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    PFQuery *query = [PFQuery queryWithClassName:@"Selfie"];
+    [query whereKey: @"selfie" equalTo:@"sefie.jpeg"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        if (!error) {
+            NSLog(@"Succesfully retrieved %d scores.", objects.count);
+            
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+                
+            }
+            
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+    }];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ 
 }
 
 #pragma mark - Table view data source

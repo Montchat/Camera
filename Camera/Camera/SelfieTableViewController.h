@@ -10,4 +10,6 @@
 
 @interface SelfieTableViewController : UITableViewController
 
+@property NSMutableArray *selfies;
+
 @end
