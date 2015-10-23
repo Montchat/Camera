@@ -7,12 +7,32 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
+#import "SelfieTableViewController.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
+- (IBAction)loginButtonPressed:(id)sender {
+    
+    NSString * username = self.usernameTextField.text;
+    NSString * password = self.passwordTextField.text;
+    
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError * error) {
+        if (user) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            SelfieTableViewController * destinationVC = [storyboard instantiateViewControllerWithIdentifier:@"SelfieTableViewController"];
+       
+        } else {
+            NSLog(@"loginUnsuccesful");
+
+        }
+    }];
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

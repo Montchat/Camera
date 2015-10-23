@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Thr-HR-PJD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -107,6 +108,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="0.96514694320000005" blue="0.95816146609999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedNext:" destination="Mr9-wG-TpB" eventType="touchUpInside" id="EMZ-2B-qEY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,30 +145,49 @@
                         <viewControllerLayoutGuide type="bottom" id="h4s-a2-TKS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sPQ-mv-S0a">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-rW-0Cx">
-                                <rect key="frame" x="20" y="28" width="560" height="269"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-rW-0Cx">
+                                <rect key="frame" x="20" y="28" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PTg-rW-0Cx" secondAttribute="height" id="qfJ-Od-ceQ"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-Sw-R5q">
-                                <rect key="frame" x="20" y="305" width="560" height="128"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S89-Ce-HHY">
-                                <rect key="frame" x="276" y="535" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S89-Ce-HHY">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitSelfie:" destination="yXZ-vo-I6W" eventType="touchUpInside" id="sAX-ao-0K5"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-Sw-R5q">
+                                <rect key="frame" x="20" y="345" width="280" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Opo-Sw-R5q" secondAttribute="height" multiplier="35:16" id="3Sw-94-ney"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PTg-rW-0Cx" firstAttribute="leading" secondItem="sPQ-mv-S0a" secondAttribute="leading" constant="20" id="4eW-4e-8b8"/>
+                            <constraint firstItem="h4s-a2-TKS" firstAttribute="top" secondItem="S89-Ce-HHY" secondAttribute="bottom" id="FDi-bb-iEL"/>
+                            <constraint firstAttribute="trailing" secondItem="S89-Ce-HHY" secondAttribute="trailing" id="ObI-OZ-2KJ"/>
+                            <constraint firstItem="PTg-rW-0Cx" firstAttribute="top" secondItem="Eep-Jn-EX4" secondAttribute="bottom" constant="8" id="Q6i-xU-5x6"/>
+                            <constraint firstAttribute="trailing" secondItem="PTg-rW-0Cx" secondAttribute="trailing" constant="20" id="RYA-Go-DrD"/>
+                            <constraint firstItem="Opo-Sw-R5q" firstAttribute="centerX" secondItem="sPQ-mv-S0a" secondAttribute="centerX" id="YtJ-Jq-Rau"/>
+                            <constraint firstItem="Opo-Sw-R5q" firstAttribute="top" secondItem="PTg-rW-0Cx" secondAttribute="bottom" constant="37" id="cqy-Dl-lbf"/>
+                            <constraint firstItem="S89-Ce-HHY" firstAttribute="leading" secondItem="sPQ-mv-S0a" secondAttribute="leading" id="jai-1O-ePm"/>
+                            <constraint firstItem="S89-Ce-HHY" firstAttribute="top" secondItem="Opo-Sw-R5q" secondAttribute="bottom" constant="65" id="pto-gd-Jvz"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="captionTextView" destination="Opo-Sw-R5q" id="WBu-Iu-Gnk"/>
+                        <outlet property="filteredImageView" destination="PTg-rW-0Cx" id="bKU-Fv-Hw6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHh-Na-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>

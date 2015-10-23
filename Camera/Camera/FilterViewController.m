@@ -9,6 +9,7 @@
 #import "FilterViewController.h"
 #import "FilterCollectionViewCell.h"
 #import "ImageEditing.h"
+#import "SubmitViewController.h"
 
 @interface FilterViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -54,6 +55,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     FilterCollectionViewCell * cell = (FilterCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     self.filterImageView.image = filterImage(self.originalImage, cell.filterName);
+    
+}
+- (IBAction)pressedNext:(id)sender {
+    
+    SubmitViewController * submitVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SubmitVC"];
+    
+    submitVC.filteredImage = self.filterImageView.image;
+    [self.navigationController pushViewController:submitVC animated:YES];
     
 }
 

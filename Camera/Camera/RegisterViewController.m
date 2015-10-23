@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import <Parse/Parse.h>
 
 @interface RegisterViewController ()
 
@@ -14,9 +15,19 @@
 
 @implementation RegisterViewController
 
+- (IBAction)signUp:(id)sender {
+    PFUser * user = [PFUser user];
+    user.username = (@"@%", self.usernameTextField.text);
+    user.password = (@"@%", self.passwordTextField.text);
+    user.email = (@"@%", self.emailTextField.text);
+    
+    [user signUpInBackground];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +44,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end
+
