@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import "AvatarViewController.h"
 #import <Parse/Parse.h>
 
 @interface RegisterViewController ()
@@ -16,12 +17,15 @@
 @implementation RegisterViewController
 
 - (IBAction)signUp:(id)sender {
-    PFUser * user = [PFUser user];
-    user.username = (@"@%", self.usernameTextField.text);
-    user.password = (@"@%", self.passwordTextField.text);
-    user.email = (@"@%", self.emailTextField.text);
+
+}
+- (IBAction)nextButtonPressed:(id)sender {
     
-    [user signUpInBackground];
+    AvatarViewController *avatarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AvatarVC"];
+    
+    avatarVC.username = self.usernameTextField.text;
+    avatarVC.password = self.passwordTextField.text;
+    avatarVC.email = self.emailTextField.text;
     
 }
 

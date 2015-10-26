@@ -7,31 +7,69 @@
 //
 
 #import "AvatarViewController.h"
+#import <Parse/Parse.h>
 
-@interface AvatarViewController ()
+@interface AvatarViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
 @implementation AvatarViewController
 
+- (IBAction)avatarButtonPressed:(id)sender {
+    UIImagePickerController * imagePicker = [[UIImagePickerController alloc]init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:true completion:^{
+
+    }];
+    
+}
+
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    //attempting to set up the image
+    
+//    if (imagePicker) {
+
+//        UIIm
+//        self.avatarImageButton set
+//        self.avatarImageButto n setImage:<#(nullable UIImage *)#> forState:<#(UIControlState)#>
+    
+//    }
+
+}
+
+- (IBAction)registerButtonPressed:(id)sender {
+    PFUser * user = [PFUser user];
+    user.username = self.username;
+    user.password = self.password;
+    user.email = self.email;
+    
+    [user saveInBackground];
+    
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Create" bundle:nil];
+    [storyboard instantiateViewControllerWithIdentifier:@"SelfieTableVC"];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+ 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
 }
-*/
+
 
 @end

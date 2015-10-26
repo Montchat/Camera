@@ -10,4 +10,12 @@
 
 @interface AvatarViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *avatarImageButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButon;
+
+@property NSString * username;
+@property NSString * password;
+@property NSString * email;
+@property UIImage * avatarImage;
+
 @end

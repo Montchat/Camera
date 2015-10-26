@@ -14,6 +14,7 @@
 
 @end
 
+
 @implementation SelfieTableViewController
 
 {
@@ -28,6 +29,7 @@
     UINavigationController *nc = [userStoryboard instantiateInitialViewController];
     
     [UIApplication sharedApplication].windows[0].rootViewController = nc;
+    NSLog(@"loggedOut");
     
 }
 
