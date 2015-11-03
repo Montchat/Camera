@@ -16,7 +16,6 @@
 		2B2DBF391BE6FEA8002774F7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2DBF381BE6FEA8002774F7 /* FilterViewController.swift */; };
 		2B735F031BDE5FA200B4C1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B735F021BDE5FA200B4C1EB /* AppDelegate.swift */; };
 		2B735F0A1BDE5FA200B4C1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B735F091BDE5FA200B4C1EB /* Assets.xcassets */; };
-		2B735F381BDE616D00B4C1EB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B735F321BDE616D00B4C1EB /* LoginViewController.m */; };
 		2B735F391BDE616D00B4C1EB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B735F341BDE616D00B4C1EB /* RegisterViewController.m */; };
 		2B735F3A1BDE616D00B4C1EB /* AvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B735F361BDE616D00B4C1EB /* AvatarViewController.m */; };
 		2B735F441BDE64A800B4C1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B735F411BDE64A800B4C1EB /* Main.storyboard */; };
@@ -40,6 +39,8 @@
 		2B7360C51BDE70D700B4C1EB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7360C41BDE70D700B4C1EB /* SettingsViewController.swift */; };
 		2BA975081BE6F06500C94BD5 /* SelfieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA975071BE6F06500C94BD5 /* SelfieTableViewCell.swift */; };
 		2BA9750A1BE6F2FF00C94BD5 /* SelfieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA975091BE6F2FF00C94BD5 /* SelfieTableViewController.swift */; };
+		2BBA69E51BE960FF005FBB3F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA69E41BE960FF005FBB3F /* RegisterViewController.swift */; };
+		2BBA69E71BE961E0005FBB3F /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA69E61BE961E0005FBB3F /* AvatarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +57,6 @@
 		2B735F0E1BDE5FA200B4C1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B735F151BDE60AA00B4C1EB /* ImageEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageEditing.h; sourceTree = "<group>"; };
 		2B735F161BDE615500B4C1EB /* Selfie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Selfie-Bridging-Header.h"; sourceTree = "<group>"; };
-		2B735F311BDE616D00B4C1EB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		2B735F321BDE616D00B4C1EB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2B735F331BDE616D00B4C1EB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		2B735F341BDE616D00B4C1EB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		2B735F351BDE616D00B4C1EB /* AvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarViewController.h; sourceTree = "<group>"; };
@@ -83,6 +82,8 @@
 		2B7360C41BDE70D700B4C1EB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2BA975071BE6F06500C94BD5 /* SelfieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2BA975091BE6F2FF00C94BD5 /* SelfieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieTableViewController.swift; sourceTree = "<group>"; };
+		2BBA69E41BE960FF005FBB3F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2BBA69E61BE961E0005FBB3F /* AvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,9 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				2B07017F1BE86A490093F470 /* ChoiceViewController.swift */,
-				2B735F311BDE616D00B4C1EB /* LoginViewController.h */,
 				2B0701811BE86A790093F470 /* LoginViewController.swift */,
-				2B735F321BDE616D00B4C1EB /* LoginViewController.m */,
+				2BBA69E41BE960FF005FBB3F /* RegisterViewController.swift */,
+				2BBA69E61BE961E0005FBB3F /* AvatarViewController.swift */,
 				2B735F331BDE616D00B4C1EB /* RegisterViewController.h */,
 				2B735F341BDE616D00B4C1EB /* RegisterViewController.m */,
 				2B735F351BDE616D00B4C1EB /* AvatarViewController.h */,
@@ -297,12 +298,13 @@
 				2BA9750A1BE6F2FF00C94BD5 /* SelfieTableViewController.swift in Sources */,
 				2B07017C1BE860930093F470 /* SubmitViewController.swift in Sources */,
 				2B2DBF371BE6F9DD002774F7 /* CaptureViewController.swift in Sources */,
-				2B735F381BDE616D00B4C1EB /* LoginViewController.m in Sources */,
 				2BA975081BE6F06500C94BD5 /* SelfieTableViewCell.swift in Sources */,
+				2BBA69E71BE961E0005FBB3F /* AvatarViewController.swift in Sources */,
 				2B07017E1BE862890093F470 /* FilterCollectionViewCell.swift in Sources */,
 				2B735F391BDE616D00B4C1EB /* RegisterViewController.m in Sources */,
 				2B2DBF391BE6FEA8002774F7 /* FilterViewController.swift in Sources */,
 				2B7360C51BDE70D700B4C1EB /* SettingsViewController.swift in Sources */,
+				2BBA69E51BE960FF005FBB3F /* RegisterViewController.swift in Sources */,
 				2B735F031BDE5FA200B4C1EB /* AppDelegate.swift in Sources */,
 				2B2DBF351BE6F9A5002774F7 /* SelfieDetailViewController.swift in Sources */,
 				2B735F3A1BDE616D00B4C1EB /* AvatarViewController.m in Sources */,

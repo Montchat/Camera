@@ -22,26 +22,20 @@ class LoginViewController: UIViewController {
     
     //MARK: - @IBActions
     @IBAction func loginButtonPressed(sender:AnyObject) {
-        let username = usernameTextField.text
-        let password = passwordTextField.text
-        
-        
-        PFUser.logInWithUsernameInBackground(username, password: password) { (user:PFUser?, error: NSError?) -> Void in
-            
-            if user != nil {
-                let storyboard: UIStoryboard = UIStoryboard(name: MAIN, bundle: nil)
-                let destinationVC = storyboard.instantiateViewControllerWithIdentifier(SELFIE_TABLE_VIEW_CONTROLLER)
+        if let username = usernameTextField.text, let password = passwordTextField.text {
+            PFUser.logInWithUsernameInBackground(username, password: password) { (user:PFUser?, error: NSError?) -> Void in
                 
-            } else {
-                NSLog("loginUnsuccesful")
+                if user != nil {
+                    let storyboard: UIStoryboard = UIStoryboard(name: MAIN, bundle: nil)
+                    let destinationVC = storyboard.instantiateViewControllerWithIdentifier(SELFIE_TABLE_VIEW_CONTROLLER)
+                    
+                } else {
+                    NSLog("loginUnsuccesful")
+                    
+                }
+                
             }
             
-            
-        }
-        PFUser.logInWithUsernameInBackground(username, password: password?) { (user:PFUser?, error:NSError?) -> Void in
-            
-            
-
         }
     
     }
