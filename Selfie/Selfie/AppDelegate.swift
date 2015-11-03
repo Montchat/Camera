@@ -7,15 +7,43 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        Parse.setApplicationId("KqUt2arFCZZuVIQcfzBeCpHWjwv7FjTpP2k3Ogpw", clientKey:"msPoU43wY7a5b37nlbzMydlMv00h3imWlNjhB1TE")
+
+        var nc: UINavigationController?
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        if PFUser.currentUser() != nil {
+            if let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil) {
+                if let viewController = storyboard.instantiateInitialViewController() as? UINavigationController {
+                    nc = viewController
+                }
+
+                
+            }
+            
+        } else {
+            if let storyboard:UIStoryboard = UIStoryboard(name: "User", bundle: nil) {
+                if let viewController = storyboard.instantiateInitialViewController() as? UINavigationController {
+                    nc = viewController
+                }
+                
+            }
+
+        }
+
+        window?.rootViewController = nc
+        window?.makeKeyAndVisible()
+
         return true
     }
 

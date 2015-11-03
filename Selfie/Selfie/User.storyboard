@@ -374,6 +374,24 @@
             </objects>
             <point key="canvasLocation" x="581" y="513"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="b7d-8O-fX0">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" id="hPS-VG-Pa9" customClass="SettingsViewController" customModule="Selfie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kSE-pv-vff"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qk0-Ca-mt8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aQO-Lb-vpf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohI-ed-ZH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="1252"/>
+        </scene>
     </scenes>
     <resources>
         <image name="avatarButton" width="112" height="112"/>
